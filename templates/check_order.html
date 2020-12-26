@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Order Confirmation</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+	<h1> Order Confirmation </h1>
+
+	<p>Customer: {{order.firstName}} {{order.lastName}}!</p>
+	<p>Order ID: {{order.id}}</p>
+	<p>Status: {{order.status}}</p>
+	
+	<p>Order Details:</p>
+	<p>1.  {{order.pizzas[0]['pizzaCount1']}}  {{order.pizzas[0]['pizzaSize1']}}  {{order.pizzas[0]['pizzaType1']}}  </p>
+	<p>2.  {{order.pizzas[1]['pizzaCount2']}}  {{order.pizzas[1]['pizzaSize2']}}  {{order.pizzas[1]['pizzaType2']}}  </p>
+
+
+	<!-- Your order of a {{order.pizzaSize}} {{order.pizzaType}} has been placed. -->
+
+</body>

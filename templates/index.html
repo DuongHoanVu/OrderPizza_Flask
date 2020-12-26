@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Awesome Pizza</title>
+	<link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+</head>
+
+<body>
+
+	<h1> Welcome to Awesome Pizza! </h1>
+
+	<!-- Place the order -->
+    <form id="submitForm" action="/submit_order" method="POST">
+
+		<!-- Customer information -->
+		<h2> Enter customer information. </h2>
+
+		<label id="firstNameLabel" for="firstNameInput">First name: </label>
+		<input id="firstNameInput" name="firstName" type="text"></input>
+		<br/> <br/>
+
+		<label id="lastNameLabel" for="lastNameInput">Last name: </label>
+		<input id="lastNameInput" name="lastName" type="text"></input>
+
+
+		<br/> <br/>
+
+
+		<!-- Order information -->
+		<div>
+			<!-- Type of pizza -->
+			<h2> What kind of pizza would you like today? </h2> <br/>
+			<input id="cheesePizzaInput1" type="radio" name="pizzaType1" value="Cheese Pizza">Cheese Pizza</input> <br/>
+			<input id="pepperoniPizzaInput"	type="radio" name="pizzaType1" value="Pepperoni Pizza">Pepperoni Pizza</input> <br/>
+    		<input id="chickenPizzaInput" type="radio" name="pizzaType1" value="Chicken Pizza">Chicken Pizza</input><br/>
+
+			<!-- Size of pizza -->
+			<h2> What size of pizza would you like today? </h2>
+			<input id="smallSizeInput1" type="radio" name="pizzaSize1" value="small">Small</input><br/>	
+			<input id="mediumSizeInput"	type="radio" name="pizzaSize1" value="medium">Medium	</input><br/>
+			<input id="largeSizeInput" type="radio" name="pizzaSize1" value="large">Large</input><br/>
+
+			<!-- Count of pizza -->
+			<h2> How many of pizza would you like today? </h2>
+			<input id="pizzaCountInput1" type="text" name="pizzaCount1" value="1"></input><br/>
+
+		</div>
+		
+		<div>
+			<!-- Type of pizza -->
+			<h2> What kind of pizza would you like today? </h2> <br/>
+			<input id="cheesePizzaInput2" type="radio" name="pizzaType2" value="Cheese Pizza">Cheese Pizza</input> <br/>
+			<input id="pepperoniPizzaInput2"	type="radio" name="pizzaType2" value="Pepperoni Pizza">Pepperoni Pizza</input> <br/>
+    		<input id="chickenPizzaInput2" type="radio" name="pizzaType2" value="Chicken Pizza">Chicken Pizza</input><br/>
+
+			<!-- Size of pizza -->
+			<h2> What size of pizza would you like today? </h2>
+			<input id="smallSizeInput2" type="radio" name="pizzaSize2" value="small">Small</input><br/>
+			<input id="mediumSizeInput2" type="radio" name="pizzaSize2" value="medium">Medium	</input><br/>
+			<input id="largeSizeInput2" type="radio" name="pizzaSize2" value="large">Large</input><br/>
+
+			<!-- Count of pizza -->
+			<h2> How many of pizza would you like today? </h2>
+			<input id="pizzaCountInput1" type="text" name="pizzaCount2" value="1"></input><br/>
+		</div>
+		<br/>
+
+		<input type="button" id="addToCartButton" value="Add to Cart" title="Click to add to cart"/>
+		
+		<input type="submit" id="submitButton" value="Submit Order" title="Click to place and order"/>
+	</form>
+
+
+	<!-- Shows order summary -->
+	<p id="confirmation"> </p>
+	<h3> Orders </h3>
+
+	<table id ="ordersTable" class="center-me">
+		<thead>
+			<tr>
+				<th> Type </th> <th> Size </th> <th> Count </th>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+
+	<h3> Raw JSON </h3>
+	<p id = "rawJson"> </p>
+
+	<!-- Code for displaying order summary -->
+	<script type="text/javascript" src="{{url_for('static', filename='place_order.js')}}"></script>
+
+
+</body>
+
+</html>

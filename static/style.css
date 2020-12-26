@@ -1,0 +1,23 @@
+input[type="button"]:hover {
+  background-color: pink;
+}
+
+input[type="radio"]:hover {
+  background-color: orange;
+}
+
+table, td, th {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+table#ordersTable {
+  width: 50%;
+}
+
+.center-me {
+  margin: 0 auto;
+}
+h3{
+  color: green;
+}
